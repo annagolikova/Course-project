@@ -1,0 +1,139 @@
+CREATE TABLE IF NOT EXISTS professors (
+    prof_id   INTEGER NOT NULL
+                      PRIMARY KEY AUTOINCREMENT,
+    prof_name TEXT    NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS weekdays (
+    weekday_id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    weekday_name TEXT
+);
+
+CREATE TABLE IF NOT EXISTS schedule_ (
+    schedule_id INTEGER NOT NULL
+                        PRIMARY KEY AUTOINCREMENT,
+    time_start  TEXT    NOT NULL,
+    time_finish TEXT    NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS subjects (
+    subject_id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    subject_name TEXT    NOT NULL,
+    prof_id      INTEGER NOT NULL,
+    FOREIGN KEY (
+        prof_id
+    )
+    REFERENCES professors (prof_id) ON DELETE CASCADE
+                                    ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS timetable (
+    timetable_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    subject_id   INTEGER NOT NULL,
+    schedule_id  INTEGER NOT NULL,
+    weekday_id   INTEGER NOT NULL,
+    aud_number   TEXT    NOT NULL,
+    week_number          NOT NULL,
+    FOREIGN KEY (
+        subject_id
+    )
+    REFERENCES subjects (subject_id) ON DELETE CASCADE
+                                     ON UPDATE CASCADE,
+    FOREIGN KEY (
+        weekday_id
+    )
+    REFERENCES weekdays (weekday_id) ON DELETE CASCADE
+                                     ON UPDATE CASCADE,
+    FOREIGN KEY (
+        schedule_id
+    )
+    REFERENCES schedule_ (schedule_id) ON DELETE CASCADE
+                                       ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS exams (
+    exam_id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    exam_type_id INTEGER NOT NULL,
+    subject_id   INTEGER NOT NULL,
+    FOREIGN KEY (
+        exam_type_id
+    )
+    REFERENCES exam_types (exam_type_id) ON DELETE CASCADE
+                                         ON UPDATE CASCADE,
+    FOREIGN KEY (
+        subject_id
+    )
+    REFERENCES subjects (subject_id) ON DELETE CASCADE
+                                     ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS exam_types (
+    exam_type_id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    exam_type_name TEXT
+);
+
+CREATE TABLE IF NOT EXISTS homework (
+    hw_id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    subject_id INTEGER NOT NULL,
+    FOREIGN KEY (
+        subject_id
+    )
+    REFERENCES subjects (subject_id) ON DELETE CASCADE
+                                     ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS homework_list (
+    hw_list_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    hw_id      INTEGER NOT NULL,
+    hw_desc    TEXT    NOT NULL,
+    fin_date   TEXT,
+    FOREIGN KEY (
+        hw_id
+    )
+    REFERENCES homework (hw_id) ON DELETE CASCADE
+                                ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS lecture_notes (
+    lnotes_id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    subject_id INTEGER,
+    FOREIGN KEY (
+        subject_id
+    )
+    REFERENCES subject (subject_id) ON DELETE CASCADE
+                                    ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS lecture_notes_list (
+    lnotes_list_id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    lnotes_id       INTEGER NOT NULL,
+    lnotes_topic    TEXT    NOT NULL,
+    lnotes_filename TEXT    NOT NULL,
+    FOREIGN KEY (
+        lnotes_id
+    )
+    REFERENCES lecture_notes (lnotes_id) ON DELETE CASCADE
+                                         ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS performance (
+    perf_id    INTEGER PRIMARY KEY AUTOINCREMENT,
+    subject_id INTEGER,
+    FOREIGN KEY (
+        subject_id
+    )
+    REFERENCES subjects (subject_id) ON DELETE CASCADE
+                                     ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS performance_list (
+    perf_list_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    perf_id      INTEGER NOT NULL,
+    grade        INTEGER NOT NULL,
+    grade_date   TEXT    NOT NULL,
+    FOREIGN KEY (
+        perf_id
+    )
+    REFERENCES performance (perf_id) ON DELETE CASCADE
+                                     ON UPDATE CASCADE
+);
