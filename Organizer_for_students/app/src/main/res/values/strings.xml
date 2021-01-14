@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Organizer_for_students</string>
+    <string name="timetable">Расписание</string>
+    <string name="homework">Домашние задания</string>
+    <string name="subjects">Предметы</string>
+    <string name="rings">Звонки</string>
+</resources>

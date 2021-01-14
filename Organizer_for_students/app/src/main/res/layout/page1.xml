@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/page1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Понеділок"
+        android:textSize="20dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+    <TableRow
+        android:id="@+id/tr0"
+        android:background="#03DAC5"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="№"
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Предмет"
+            android:textColor="#000B36" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ауд"
+            android:textColor="#000B36" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Початок"
+            android:textColor="#000B36" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Кінець"
+            android:textColor="#000B36" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tr1"
+        android:background="#F0F7F7"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/subj1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/aud1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/start1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/end1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tr2"
+        android:background="#F0F7F7"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/subj2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/aud2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/start2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/end2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tr3"
+        android:background="#F0F7F7"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3"
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/subj3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/aud3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/start3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/end3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tr4"
+        android:background="#F0F7F7"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4"
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/subj4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/aud4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/start4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/end4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tr5"
+        android:background="#F0F7F7"
+        android:padding="5dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5"
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/subj5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/aud5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/start5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+        <TextView
+            android:id="@+id/end5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/colorTextTable" />
+
+    </TableRow>
+
+</TableLayout>

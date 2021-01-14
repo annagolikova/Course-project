@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_main_height">150dp</dimen>
+    <dimen name="main_menu_width">250dp</dimen>
+    <dimen name="big_padding">16dp</dimen>
+</resources>
